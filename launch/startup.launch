@@ -1,0 +1,7 @@
+<launch>
+    <include file="$(find manipulator_h_bringup)/launch/robotis_manipulator.launch"/>
+    <include file="$(find manipulator_h_manager)/launch/manipulator_h_manager.launch"/>
+    <node name="setMode" pkg="mealstation" type="Setmode.py" />
+    <node name="SoylentDispenser" pkg="mealstation" type="SoylentDispenserClient.py" />
+    <node name="WaterDispenser" pkg="mealstation" type="WaterDispenderClient.py" />
+</launch> 
