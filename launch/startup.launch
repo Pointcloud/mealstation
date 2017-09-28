@@ -3,5 +3,5 @@
     <include file="$(find manipulator_h_manager)/launch/manipulator_h_manager.launch"/>
     <node name="setMode" pkg="mealstation" type="Setmode.py" />
     <node name="SoylentDispenser" pkg="mealstation" type="SoylentDispenserServer.py" />
-    <node name="WaterDispenser" pkg="mealstation" type="WaterDispenderClient.py" />
+    <node name="WaterDispenser" pkg="mealstation" type="WaterDispenderServer.py" />
 </launch> 
