@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 import system
 import time
 import rospy
@@ -5,7 +7,7 @@ from servosix import ServoSix
 
 def handle_dispense_soylent(req):
     ss.set_servo(6, 0)
-    time.sleep(1)
+    time.sleep(1)0
     ss.set_servo(6, 120)
     return True
 
