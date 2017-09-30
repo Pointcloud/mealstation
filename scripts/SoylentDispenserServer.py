@@ -3,6 +3,7 @@
 import time
 import rospy
 from servosix import ServoSix
+from mealstation.srv import *
 
 def handle_dispense_soylent(req):
     ss.set_servo(6, 0)
