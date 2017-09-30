@@ -2,6 +2,7 @@
 
 import time
 import rospy
+mealstation.srv import *
 from servosix import ServoSix
 
 def handle_dispense_soylent(req):
@@ -12,7 +13,7 @@ def handle_dispense_soylent(req):
 
 def dispense_solyent_server():
     rospy.init_node('dispense_solyent_server')
-    s = rospy.Service('dispense_soylent', mealstation.srv.PowderDispenser, handle_dispense_soylent)
+    s = rospy.Service('dispense_soylent', PowderDispenser, handle_dispense_soylent)
     ss = ServoSix()
     print "Soylent Dispenser service active"
     rospy.spin()
