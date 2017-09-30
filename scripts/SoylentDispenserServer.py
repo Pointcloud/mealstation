@@ -1,6 +1,5 @@
 #!/usr/bin/env python
 
-import system
 import time
 import rospy
 from servosix import ServoSix
