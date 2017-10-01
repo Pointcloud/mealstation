@@ -14,9 +14,9 @@ def handle_dispense_soylent(req):
 def dispense_solyent_server():
     rospy.init_node('dispense_solyent_server')
     s = rospy.Service('dispense_soylent', PowderDispenser, handle_dispense_soylent)
-    ss = ServoSix()
     print "Soylent Dispenser service active"
     rospy.spin()
 
 if __name__ == "__main__":
+    ss = ServoSix()
     dispense_solyent_server()
