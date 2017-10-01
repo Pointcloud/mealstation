@@ -8,7 +8,7 @@ def dispense_soylent():
     try:
         dispense_soylent = rospy.ServiceProxy('dispense_soylent', PowderDispenser)
         resp1 = dispense_soylent(1)
-        return resp1.sum
+        return resp1
     except rospy.ServiceException, e:
         print "Service call failed: %s"%e
 
