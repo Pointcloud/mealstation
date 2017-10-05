@@ -12,5 +12,14 @@ def dispense_soylent():
     except rospy.ServiceException, e:
         print "Service call failed: %s"%e
 
+def dispense_water():
+    rospy.wait_for_service('dispense_water')
+    try:
+        dispense_water = rospy.ServiceProxy('dispense_water', WaterDispenser)
+        resp1 = dispense_water(1)
+        return resp1
+    except rospy.ServiceException, e:
+        print "Service call failed: %s"%e
+
 if __name__ == "__main__":
-    dispense_soylent()
+    dispense_water()
