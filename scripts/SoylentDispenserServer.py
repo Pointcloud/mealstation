@@ -8,7 +8,7 @@ from servosix import ServoSix
 def handle_dispense_soylent(req):
     ss.set_servo(6, 0)
     time.sleep(2)
-    ss.set_servo(6, 121)
+    ss.set_servo(6, 115)
     return True
 
 def dispense_solyent_server():
