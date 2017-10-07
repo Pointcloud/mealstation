@@ -22,4 +22,4 @@ def dispense_water():
         print "Service call failed: %s"%e
 
 if __name__ == "__main__":
-    dispense_water()
+    dispense_soylent()
