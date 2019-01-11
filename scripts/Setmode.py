@@ -8,7 +8,7 @@ def set_mode():
     pub = rospy.Publisher('/robotis/base/set_mode_msg',String, queue_size=0)
     rospy.init_node('set_mode', anonymous=True)
     msg = "set_mode"
-    rate = rospy.Rate(.1) # 1hz
+    rate = rospy.Rate(1) # 1hz
 
     while not rospy.is_shutdown(): 
         pub.publish(msg) 
